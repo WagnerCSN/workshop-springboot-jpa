@@ -13,7 +13,7 @@ import com.wcsystem.aulaSpring.entities.Product;
 import com.wcsystem.aulaSpring.services.ProductService;
 
 @RestController
-@RequestMapping(value = "/products")
+@RequestMapping(value = "/product")
 public class ProductResource {
 
 	@Autowired
@@ -22,6 +22,7 @@ public class ProductResource {
 	@GetMapping
 	public ResponseEntity<List<Product>> findAll(){
 		List<Product> list = service.findAll();
+		
 		return ResponseEntity.ok().body(list);
 	}
 	

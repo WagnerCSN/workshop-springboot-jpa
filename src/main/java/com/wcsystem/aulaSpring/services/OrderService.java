@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wcsystem.aulaSpring.entities.Order;
-import com.wcsystem.aulaSpring.entities.User;
 import com.wcsystem.aulaSpring.repositories.OrderRepository;
 
 @Service
