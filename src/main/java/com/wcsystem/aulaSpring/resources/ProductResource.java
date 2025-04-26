@@ -13,7 +13,7 @@ import com.wcsystem.aulaSpring.entities.Product;
 import com.wcsystem.aulaSpring.services.ProductService;
 
 @RestController
-@RequestMapping(value = "/product")
+@RequestMapping(value = "/products")
 public class ProductResource {
 
 	@Autowired
