@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.wcsystem.aulaSpring.entities.User;
 import com.wcsystem.aulaSpring.repositories.UserRepository;
+import com.wcsystem.aulaSpring.services.exceptions.ResourceNotFoundException;
 
 import jakarta.transaction.Transactional;
 
@@ -23,7 +24,7 @@ public class UserService {
 	
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
 	
 	public User insert(User user) {
